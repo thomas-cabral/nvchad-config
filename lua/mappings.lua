@@ -14,3 +14,6 @@ map("n", "<leader>pv", "<cmd>NvimTreeFocus<CR>", { desc = "focus files"})
 -- yank to system clipboard
 map({"n", "v"}, "<leader>y", [["+y]], { desc = "yank to system clipboard" })
 map({"n", "v"}, "<leader>Y", [["+Y]], { desc = "yank to system clipboard" })
+
+-- vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+map("n", "<leader>gs", "<cmd>Git<CR>", { desc = "git status" })

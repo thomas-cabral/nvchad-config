@@ -6,7 +6,26 @@ return {
       require "configs.conform"
     end,
   },
+  {
+    "tpope/vim-fugitive",
+    event = "VeryLazy",
+    lazy = false,
+  },
+  {
+    "nvimtools/none-ls.nvim",
+    event = "VeryLazy",
+    opts = function ()
+      return require "configs.custom.null-ls"
+    end
+  },
 
+  {
+    "rust-lang/rust.vim",
+    ft = "rust",
+    init = function ()
+      vim.g.rustfmt_autosave = 1
+    end
+  },
   {
   "scalameta/nvim-metals",
   dependencies = {
@@ -68,7 +87,8 @@ return {
       opts = {
         ensure_installed = {
           "lua-language-server", "stylua",
-          "html-lsp", "css-lsp" , "prettier"
+          "html-lsp", "css-lsp" , "prettier",
+          "tailwindcss-language-server",
         },
       },
      },
