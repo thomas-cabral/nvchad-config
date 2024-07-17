@@ -7,6 +7,11 @@ return {
     end,
   },
   {
+    "github/copilot.vim",
+    event = "VeryLazy",
+    lazy = false,
+  },
+  {
     "tpope/vim-fugitive",
     event = "VeryLazy",
     lazy = false,
