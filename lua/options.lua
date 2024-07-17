@@ -6,3 +6,4 @@ require "nvchad.options"
 -- o.cursorlineopt ='both' -- to enable cursorline!
 vim.opt.nu = true
 vim.opt.relativenumber = true
+
