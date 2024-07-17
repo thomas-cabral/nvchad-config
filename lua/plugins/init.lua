@@ -80,6 +80,7 @@ return {
           "html", "css", "go", "rust",
           "typescript", "javascript",
         },
+        auto_install = { enable = true }
       },
      },
   }
