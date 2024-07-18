@@ -7,6 +7,16 @@ return {
     end,
   },
   {
+    "nvim-tree/nvim-tree.lua",
+    event = "VeryLazy",
+    lazy = false,
+  },
+  {
+    "github/copilot.vim",
+    event = "VeryLazy",
+    lazy = false,
+  },
+  {
     "tpope/vim-fugitive",
     event = "VeryLazy",
     lazy = false,

@@ -6,7 +6,7 @@ local M = {}
 
 M.ui = {
 	theme = "nightfox",
-
+  transparency = true,
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
