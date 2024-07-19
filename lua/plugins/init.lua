@@ -7,14 +7,51 @@ return {
     end,
   },
   {
+    "zbirenbaum/copilot.lua",
+    event = "InsertEnter",
+    cmd = "Copilot",
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
+  {
+   "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      {
+        "zbirenbaum/copilot-cmp",
+        config = function()
+          require("copilot_cmp").setup()
+        end,
+      },
+    },
+    opts = {
+      sources = {
+        { name = "nvim_lsp", group_index = 2 },
+        { name = "luasnip",  group_index = 2 },
+        { name = "buffer",   group_index = 2 },
+        { name = "nvim_lua", group_index = 2 },
+        { name = "path",     group_index = 2 },
+        { name = "copilot",  group_index = 2 },
+      },
+    },
+  },
+  {
     "nvim-tree/nvim-tree.lua",
     event = "VeryLazy",
     lazy = false,
   },
   {
-    "github/copilot.vim",
-    event = "VeryLazy",
-    lazy = false,
+    "mbbill/undotree",
+    cmd = "UndotreeToggle",
   },
   {
     "tpope/vim-fugitive",

@@ -17,3 +17,6 @@ map({"n", "v"}, "<leader>Y", [["+Y]], { desc = "yank to system clipboard" })
 
 -- vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 map("n", "<leader>gs", "<cmd>Git<CR>", { desc = "git status" })
+
+-- undotree
+map("n", "<leader>u", "<cmd>UndotreeToggle<CR>", { desc = "undotree" })
