@@ -21,3 +21,5 @@ lspconfig.ts_ls.setup {
   on_init = on_init,
   capabilities = capabilities,
 }
+
+vim.lsp.enable('omnisharp')
